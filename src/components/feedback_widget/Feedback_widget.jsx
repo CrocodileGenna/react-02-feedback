@@ -30,7 +30,12 @@ class Feedback extends Component {
 
   percentage = () => {
     let summa = this.state.good + this.state.neutral + this.state.bad;
-    let percent = (this.state.good / summa) * 100;
+
+    let goodRating = this.state.good * 100;
+    let normalRating = this.state.neutral * 50;
+    let badRating = this.state.bad * 0;
+
+    let percent = (goodRating + normalRating + badRating) / summa;
     return percent.toFixed(1);
   };
 
