@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { Buttons } from './Buttons';
-import { ListAndValue } from './ListAndValue';
-import {
-  CONTENT_DIV,
-  TITLE_H1,
-  STATISTICS_DIV,
-} from './styled/Feedback.styled';
+import PropTypes from 'prop-types';
+import { Buttons } from './components/Buttons';
+import { ListAndValue } from './components/ListAndValue';
+import { CONTENT_DIV, TITLE_H1, STATISTICS_DIV } from './Feedback.styled';
 
-class Feedback extends Component {
+export class Feedback extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -72,4 +69,8 @@ class Feedback extends Component {
   }
 }
 
-export default Feedback;
+// console.log(Feedback);
+Feedback.propTypes = {
+  Buttons: PropTypes.func,
+  ListAndValue: PropTypes.func,
+};

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { CONTAINER_DIV, BUTTON } from './styled/Buttons.styled';
 
 export function Buttons({ good, neutral, bad }) {
@@ -9,3 +10,9 @@ export function Buttons({ good, neutral, bad }) {
     </CONTAINER_DIV>
   );
 }
+
+Buttons.propTypes = {
+  good: PropTypes.func.isRequired,
+  neutral: PropTypes.func.isRequired,
+  bad: PropTypes.func.isRequired,
+};

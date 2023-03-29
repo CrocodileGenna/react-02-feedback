@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export function ListAndValue({ good, neutral, bad, summa, percentage }) {
   return (
     <>
@@ -20,3 +22,11 @@ export function ListAndValue({ good, neutral, bad, summa, percentage }) {
     </>
   );
 }
+
+ListAndValue.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  summa: PropTypes.number.isRequired,
+  percentage: PropTypes.string.isRequired,
+};

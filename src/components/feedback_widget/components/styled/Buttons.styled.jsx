@@ -17,7 +17,6 @@ export const BUTTON = styled.button`
   box-shadow: 0px 0px 5px 0px
     ${el => {
       const { children } = el;
-      console.log(el);
       switch (children) {
         case 'Good':
           return 'green';
@@ -36,7 +35,6 @@ export const BUTTON = styled.button`
     color: #fff;
     background-color: ${el => {
       const { children } = el;
-      console.log(el);
       switch (children) {
         case 'Good':
           return 'green';
